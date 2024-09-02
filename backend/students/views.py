@@ -22,8 +22,8 @@ class StudentView(APIView):
         try:
             student = Student.objects.get(studentId = pk)
             return student
-        except Student.DoesNotExist():
-            raise NotFound('Students not found')
+        except Student.DoesNotExist:
+            raise NotFound(" Students doesn't exit")
 
     def get(self,request,pk=None):
         
@@ -43,3 +43,8 @@ class StudentView(APIView):
             serializer.save()
             return JsonResponse("Record updates successfully",safe=False)
         return JsonResponse("Failed to update record ")
+
+    def delete(self,request,pk=None):
+        delete_std = Student.objects.get(studentId=pk)
+        delete_std.delete()
+        return JsonResponse("student deleted successfully",safe=False)
