@@ -34,3 +34,12 @@ class StudentView(APIView):
             students = Student.objects.all()
             serializer = StudentSerializer(students,many=True)
         return Response(serializer.data)
+    
+    def put(self,request,pk=None):
+        update_student = Student.objects.get(studentId=pk)
+        serializer = StudentSerializer(instance=update_student,data=request.data,partial=True)
+
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse("Record updates successfully",safe=False)
+        return JsonResponse("Failed to update record ")
