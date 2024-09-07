@@ -19,6 +19,7 @@ const Students = () => {
 
   return (
     <div className='row p-12'>
+      <div className='bg-gray-900 text-center text-white p-2'>Students list</div>
       <Table striped bordered hover>
         <thead>
           <tr>
