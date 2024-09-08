@@ -1,4 +1,4 @@
-.sidebar{
+.sidebars {
     display: flex;
     height: 100vh;
     float: left;
@@ -11,3 +11,11 @@
   .custom-modal-close .btn-close {
     filter: brightness(0) invert(1);
   }
+tr th{
+  width: 20rem;
+  padding: 2rem;
+}
+table{
+  font-size: 15px;
+}
+/* .studentTable{} */

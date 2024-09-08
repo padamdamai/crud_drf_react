@@ -1,7 +1,4 @@
-import React from 'react';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
+import React from 'react'
 import {
   CDBSidebar,
   CDBSidebarContent,
@@ -12,21 +9,11 @@ import {
 } from 'cdbreact';
 import { NavLink } from 'react-router-dom';
 
-const NavigationBar = () => {
+
+const Sidebar = () => {
   return (
     <>
-      <div>
-        <Navbar bg="dark" data-bs-theme="dark">
-          <Container>
-            <Navbar.Brand href="/">
-              <img src="./graduation.png" className='rounded-circle' height={50} width={50} alt="" />
-            </Navbar.Brand>
-            <Nav className="me-auto text-white">
-              Student Management System
-            </Nav>
-          </Container>
-        </Navbar>
-        {/* <div className='sidebar'>
+    <div className='h-screen'>
           <CDBSidebar>
             <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>Navigation</CDBSidebarHeader>
             <CDBSidebarContent>
@@ -54,10 +41,9 @@ const NavigationBar = () => {
               </div>
             </CDBSidebarFooter>
           </CDBSidebar>
-        </div> */}
-      </div>
+        </div>
     </>
-  );
+  )
 }
 
-export default NavigationBar;
+export default Sidebar

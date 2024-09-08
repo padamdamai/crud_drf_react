@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import axios from 'axios';
+import Sidebar from './Sidebar';
 
 const Students = () => {
   const [students, setStudents] = useState([]);
@@ -18,9 +19,13 @@ const Students = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className='row p-12'>
-      <div className='bg-gray-900 text-center text-white p-2'>Students list</div>
-      <Table striped bordered hover>
+  <div className="flex w-full">
+    <div className="sidebars_container">
+      <Sidebar/>
+    </div>
+    <div className='md:p-3 sm:p-1 studentlist '>
+      <div className='bg-gray-900 text-center text-white p-2 '>Students list</div>
+      <Table striped bordered hover className='studentTable'>
         <thead>
           <tr>
             <th>Id</th>
@@ -44,6 +49,7 @@ const Students = () => {
           ))}
         </tbody>
       </Table>
+    </div>
     </div>
   );
 };

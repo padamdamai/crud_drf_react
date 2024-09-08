@@ -5,6 +5,7 @@ import { Button, ButtonToolbar } from 'react-bootstrap';
 import { MdOutlineDeleteOutline, MdEditNote } from "react-icons/md";
 import AddStudentModel from './AddStudentModel';
 import UpdateStdModel from './UpdateStdModel';
+import Sidebar from './Sidebar';
 
 const Management = () => {
   const [students, setStudents] = useState([]);
@@ -75,14 +76,26 @@ const Management = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className='row p-12'>
+    <div className="flex  md:flex-row sm:flex-col ">
+    <div className="sidebars_container d-flex">
+      <div>
+      <Sidebar/>
+      </div>
+      <div className='md:hidden'>
+      <img src="./stud4.png" width='680rem' height='' alt="" />
+      <p className='p-4 font-semibold'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorem iure, voluptatum deleniti excepturi aut aperiam officiis reprehenderit aliquam accusantium. In quam impedit asperiores quia, aut soluta vero dolores quaerat modi numquam nostrum adipisci, doloremque omnis nesciunt error rem sed, laborum corporis commodi illum saepe suscipit consequuntur animi? Autem, suscipit.</p>
+
+      </div>
+
+    </div>
+    <div className='p-8 sm:m-0'>
       <ButtonToolbar>
-        <Button onClick={handleAdd} className='bg-green-500 w-[10rem] p-1 m-2 ms-0 rounded-sm'>Add new student</Button>
+        <Button onClick={handleAdd} className='bg-green-500 w-[10rem] p-1 ms-0 rounded-sm'>Add new student</Button>
         <AddStudentModel show={addModelShow} onHide={handleClose} setUpdatedpage={setUpdatedpage} />
       </ButtonToolbar>
-      <div className='bg-gray-900 text-white text-center p-2'>Student</div>
+      <div className='bg-gray-900 text-white text-center p-2 w-[100%]'>Student</div>
 
-      <Table striped bordered hover >
+      <Table striped bordered hover>
         <thead>
           <tr>
             <th>Id</th>
@@ -103,14 +116,14 @@ const Management = () => {
               <td>{std.RegisterationNO}</td>
               <td>{std.Email}</td>
               <td>{std.Course}</td>
-              <td className='d-flex gap-2'>
+              <td className='d-flex gap-2 sm:gap-1 sm:flex-col md:flex-row'>
                 <ButtonToolbar>
-                  <Button onClick={e => handleUpdateStd(e, std)}>
-                    <MdEditNote className='fs-5' />
+                  <Button  onClick={e => handleUpdateStd(e, std)}>
+                    <MdEditNote className='fs-6' />
                   </Button>
                 </ButtonToolbar>
-                <Button  onClick={e => handleDeleteStd(e,std.studentId)}  className='bg-red-600 active:bg-red-400 hover:bg-yellow-400' >
-                  <MdOutlineDeleteOutline className='fs-5'  />
+                <Button  onClick={e => handleDeleteStd(e,std.studentId)}  className='w-10 bg-red-600 active:bg-red-400 hover:bg-yellow-400' >
+                  <MdOutlineDeleteOutline className='fs-6'  />
                 </Button>
               </td>
             </tr>
@@ -127,6 +140,7 @@ const Management = () => {
           setUpdatedpage={setUpdatedpage}
         />
       )}
+    </div>
     </div>
   );
 };

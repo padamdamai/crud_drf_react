@@ -1,8 +1,14 @@
 import Carousel from 'react-bootstrap/Carousel';
-
+import Sidebar from './Sidebar';
 function Home() {
   return (
-    <div className='row h-7'>
+    <>
+<div className="flex">
+    <div className="sidebars_container">
+      <Sidebar/>
+    </div>
+    
+    <div className='w-full'>
       <Carousel data-bs-theme="dark">
       <Carousel.Item>
         <img
@@ -11,10 +17,6 @@ function Home() {
           alt="First slide"
           
         />
-        <Carousel.Caption>
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -22,10 +24,6 @@ function Home() {
           src="stud2.png"
           alt="./Second slide"
         />
-        <Carousel.Caption>
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -33,15 +31,12 @@ function Home() {
           src="./stud3.png"
           alt="Third slide"
         />
-        <Carousel.Caption>
-          <h5>Third slide label</h5>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
     </div>
+</div>
+    
+    </>
   );
 }
 
