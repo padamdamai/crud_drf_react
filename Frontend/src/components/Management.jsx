@@ -76,8 +76,8 @@ const Management = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className="flex  md:flex-row sm:flex-col ">
-    <div className="sidebars_container d-flex">
+    <div className="flex manageContainer md:flex-row sm:flex-col ">
+    <div className="sidebars_container d-flex sm:flex-row">
       <div>
       <Sidebar/>
       </div>
@@ -93,7 +93,7 @@ const Management = () => {
         <Button onClick={handleAdd} className='bg-green-500 w-[10rem] p-1 ms-0 rounded-sm'>Add new student</Button>
         <AddStudentModel show={addModelShow} onHide={handleClose} setUpdatedpage={setUpdatedpage} />
       </ButtonToolbar>
-      <div className='bg-gray-900 text-white text-center p-2 w-[100%]'>Student</div>
+      <div className='bg-gray-900 text-white text-center p-2  w-[100%]'>Student</div>
 
       <Table striped bordered hover>
         <thead>
@@ -116,7 +116,7 @@ const Management = () => {
               <td>{std.RegisterationNO}</td>
               <td>{std.Email}</td>
               <td>{std.Course}</td>
-              <td className='d-flex gap-2 sm:gap-1 sm:flex-col md:flex-row'>
+              <td className='d-flex flexBTN gap-2 sm:gap-1 sm:flex-col md:flex-row'>
                 <ButtonToolbar>
                   <Button  onClick={e => handleUpdateStd(e, std)}>
                     <MdEditNote className='fs-6' />

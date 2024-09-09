@@ -15,7 +15,16 @@ tr th{
   width: 20rem;
   padding: 2rem;
 }
-table{
-  font-size: 15px;
+@media (min-width: 0px) and (max-width: 640px) {
+  table{
+    font-size: 15px;
+  }
+  .manageContainer{
+    display: flex;
+    flex-direction: column;
+  }
+  .flexBTN{
+    display: flex;
+    flex-direction: column;
+  }
 }
-/* .studentTable{} */

@@ -13,7 +13,7 @@ import { NavLink } from 'react-router-dom';
 const Sidebar = () => {
   return (
     <>
-    <div className='h-screen'>
+    <div className='md:h-screen sm:h-full'>
           <CDBSidebar>
             <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>Navigation</CDBSidebarHeader>
             <CDBSidebarContent>
