@@ -19,13 +19,22 @@ const Students = () => {
   if (error) return <div>{error}</div>;
 
   return (
-  <div className="flex w-full">
-    <div className="sidebars_container">
-      <Sidebar/>
+  <div className="flex w-full sm:flex-col studentList md:flex-row">
+    <div className=" d-flex sm:flex-row">
+      <div>
+        <Sidebar/>
+      </div>
+
+      <div className='md:hidden'>
+        <img src="./stud4.png" width='680rem' height='' alt="" />
+      <p className='p-4 font-semibold'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorem iure, voluptatum deleniti excepturi aut aperiam officiis reprehenderit aliquam accusantium. In quam impedit asperiores quia, aut soluta vero dolores quaerat modi numquam nostrum adipisci, doloremque omnis nesciunt error rem sed, laborum corporis commodi illum saepe suscipit consequuntur animi? Autem, suscipit.</p>
+
+      </div>
+
     </div>
-    <div className='md:p-3 sm:p-1 studentlist '>
-      <div className='bg-gray-900 text-center text-white p-2 '>Students list</div>
-      <Table striped bordered hover className='studentTable'>
+    <div className='md:p-3 sm:p-11 studentT'>
+      <div className='bg-gray-900 text-center text-white p-2'>Students list</div>
+      <Table striped bordered hover>
         <thead>
           <tr>
             <th>Id</th>

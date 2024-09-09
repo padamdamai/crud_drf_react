@@ -27,4 +27,19 @@ tr th{
     display: flex;
     flex-direction: column;
   }
+  .studentlist{
+    margin-top: 3rem;
+    background-color: red;
+  }
+  .studentList{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .studentT{
+    padding: 2rem;
+  }
+  .slidebarLsm{
+    height: 50vh;
+  }
 }

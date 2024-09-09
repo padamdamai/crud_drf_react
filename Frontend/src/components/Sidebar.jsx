@@ -13,7 +13,7 @@ import { NavLink } from 'react-router-dom';
 const Sidebar = () => {
   return (
     <>
-    <div className='md:h-screen sm:h-full'>
+    <div className='md:h-screen sm:h-full slidebarLsm'>
           <CDBSidebar>
             <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>Navigation</CDBSidebarHeader>
             <CDBSidebarContent>
@@ -23,7 +23,7 @@ const Sidebar = () => {
                 </NavLink>
 
                 <NavLink to="/students" className={({ isActive }) => isActive ? "activeClicked" : ""}>
-                  <CDBSidebarMenuItem icon="home">Student List</CDBSidebarMenuItem>
+                  <CDBSidebarMenuItem icon="list">Student List</CDBSidebarMenuItem>
                 </NavLink>
 
                 <NavLink to="/management" className={({ isActive }) => isActive ? "activeClicked" : ""}>
