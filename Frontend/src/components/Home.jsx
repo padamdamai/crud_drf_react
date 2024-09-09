@@ -13,7 +13,7 @@ function Home() {
           <Carousel data-bs-theme="dark">
             <Carousel.Item>
               <img
-                className="d-block w-full h-[100vh] object-cover bgCover"
+                className="d-block w-full h-[100vh] object-cover"
                 src="./diverse.png"
                 alt="First slide"
               />
